@@ -115,9 +115,9 @@ def open_ssh_conn(ip):
         #Closing the command file
         selected_cmd_file.close()
         
-        #Checking command output for syntax errors
         router_output = connection.recv(65535)
         
+        #Checking command output for syntax errors (only for Huawei VRP)
         if re.search(r"Unrecognized command found at", router_output):
             print "* There was at least one syntax error on device %s" % ip
             
