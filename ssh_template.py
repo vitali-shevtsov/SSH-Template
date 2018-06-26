@@ -54,7 +54,7 @@ def cmd_is_valid():
     cmd_file_is_valid = True
     global cmd_file
 
-    cmd_file = 'cmd_file'
+    cmd_file = 'ssh_cmd_file'
     if os.path.isfile(cmd_file) == True:
         print "\n* Sending command(s) to device(s)...\n"
     else:
